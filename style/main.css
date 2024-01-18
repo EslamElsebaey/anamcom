@@ -1633,7 +1633,7 @@ html[dir=ltr] .client-reviews .swiper-buttons div i {
   }
 }
 footer {
-  padding-bottom: 50px;
+  padding-bottom: 55px;
 }
 
 .footer-content {
@@ -1658,6 +1658,11 @@ footer {
   margin-inline-start: 5px;
 }
 
+@media only screen and (max-width: 767px) {
+  footer {
+    padding-bottom: 40px;
+  }
+}
 html[dir=ltr] .features .general-title, html[dir=ltr] .list-item .item-title, html[dir=ltr] .banner-desc .main-title {
   line-height: 1.3;
 }
