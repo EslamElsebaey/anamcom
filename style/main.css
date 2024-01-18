@@ -178,10 +178,6 @@ a:focus, button:focus {
   visibility: visible;
 }
 
-.overflow-hiddden {
-  overflow: hidden;
-}
-
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1170px;
@@ -301,6 +297,7 @@ a:focus, button:focus {
   .about .item .title {
     margin-top: 20px;
     line-height: 1.5;
+    font-size: 16px;
   }
   .about .item .icon {
     font-size: 35px;
@@ -918,13 +915,10 @@ header {
 .nav-ul > li a:hover {
   color: #ed1d24;
 }
-.nav-ul > li a.active {
-  color: #ed1d24;
-}
 
 @media only screen and (min-width: 992px) {
-  .closenav-holder, .openBtn {
-    display: none;
+  .nav-ul > li a.active {
+    color: #ed1d24;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -947,17 +941,6 @@ header {
     align-items: center;
   }
   .openBtn i {
-    color: #fff;
-    font-size: 24px;
-  }
-  .closenav-holder {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .closenav-holder .closeBtn {
-    display: flex;
-  }
-  .closenav-holder .closeBtn i {
     color: #fff;
     font-size: 24px;
   }
@@ -986,7 +969,7 @@ header {
   }
   .nav-ul {
     flex-direction: column;
-    margin: 105px 0 0 0;
+    margin: 120px 0 0 0;
     align-items: center;
   }
   .nav-ul > li {
@@ -996,9 +979,6 @@ header {
   }
 }
 @media only screen and (max-width: 767px) {
-  .nav-ul {
-    margin-top: 80px;
-  }
   header {
     padding: 10px 0;
   }
@@ -1024,6 +1004,16 @@ header {
 }
 .padding-8 nav {
   padding-top: 22px;
+}
+
+.header-mob .openBtn i {
+  color: #fff;
+}
+.header-mob .header-links a {
+  background-color: rgba(255, 255, 255, 0.102);
+}
+.header-mob .nav-ul > li a {
+  color: #fff;
 }
 
 .mainBanner {
@@ -1177,6 +1167,9 @@ header {
 .client-reviews .swiper-slide-active, .client-reviews .swiper-slide-next {
   opacity: 1;
 }
+.client-reviews .swiper-slide-prev {
+  opacity: 0;
+}
 .client-reviews .swiper-pagination {
   display: none;
 }
@@ -1310,9 +1303,6 @@ html[dir=ltr] .client-reviews .swiper-buttons div i {
     align-items: center;
     row-gap: 30px;
   }
-  .swiper-slide {
-    opacity: 1;
-  }
   .client-reviews .sub-title {
     text-align: center;
   }
@@ -1341,13 +1331,19 @@ html[dir=ltr] .client-reviews .swiper-buttons div i {
     padding: 0;
     padding-bottom: 50px;
   }
+  .client-reviews .swiper-slide-prev {
+    opacity: 1;
+  }
+  .swiper-slide {
+    opacity: 1;
+  }
 }
 @media only screen and (max-width: 767px) {
-  .client-reviews .content {
-    padding-top: 0;
-  }
   .client-reviews {
     margin-top: 25px;
+  }
+  .client-reviews .content {
+    padding-top: 0;
   }
   .client-reviews .swiper-slide {
     display: flex;

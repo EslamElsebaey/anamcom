@@ -1,13 +1,14 @@
 
 $(window).on("load" , function(){
   $(".preloader").fadeOut();
+  
 })
 
 
 
 
 $(document).ready(function(){
-
+  new WOW().init();
   // fire select2
   $('.myselect').select2();
 
@@ -17,7 +18,9 @@ $(document).ready(function(){
   });
 
 
-  new WOW().init();
+  
+      
+   
 
   
 
@@ -151,17 +154,31 @@ let closeBtn = $(".closeBtn") , openBtn = $(".openBtn") ;
 
 
 openBtn.on("click", function(){
-  // $("nav").addClass("open-nav");  
+  
+  if($(window).width() < 992){
+    if($(window).scrollTop() > 100){
+      $("header").toggleClass("header-mob");
+      let currentSrc = $(".logo img").attr("src");
+      if (currentSrc == "images/anamcom-logo-dark.svg") {
+        $(".logo img").attr("src", "images/anamcom-logo-light.svg");
+      } else {
+        $(".logo img").attr("src", "images/anamcom-logo-dark.svg");
+      }
+    }
+  
+  }
+
   $("nav").slideToggle(400)
-  $("body").toggleClass("overflow-hiddden") ;
+  $("body").toggleClass("overflow-hidden") ;
   $(this).children("i").toggleClass("fa-xmark")
+ 
+   
+   
+ 
 })
 
 
-// closeBtn.on("click" , function(){
-//   $("nav").slideUp(400)
-//   $("body").removeClass("overflow-hiddden") ;
-// })
+
 
 
 
@@ -192,7 +209,7 @@ $(".toTop").click(function(){
 
 
 
-})
+}) // End of document ready
 
 
 
