@@ -1259,9 +1259,9 @@ header {
   content: "";
   top: 0;
   inset-inline-start: 0;
-  width: 100%;
+  width: 110%;
   background-color: #fff;
-  inset-inline-start: -100%;
+  inset-inline-start: -110%;
   height: 100%;
   z-index: -1;
 }
