@@ -1150,8 +1150,8 @@ header {
     margin-bottom: 12px;
   }
   .mainBanner-parent {
-    -webkit-clip-path: ellipse(130% 100% at 50% 0%);
-            clip-path: ellipse(130% 100% at 50% 0%);
+    -webkit-clip-path: ellipse(140% 100% at 50% 0%);
+            clip-path: ellipse(140% 100% at 50% 0%);
   }
   .banner-desc .second-title {
     font-size: 22px;
