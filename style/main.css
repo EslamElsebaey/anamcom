@@ -883,6 +883,11 @@ header {
   font-size: 26px;
 }
 
+.links-bars-holder, .logo {
+  width: 13.333%;
+  display: flex;
+}
+
 .header-content {
   display: flex;
   align-items: center;
@@ -927,6 +932,9 @@ header {
   }
 }
 @media only screen and (max-width: 991px) {
+  .links-bars-holder, .logo {
+    width: auto;
+  }
   .big-menu li a {
     font-size: 18px;
   }
@@ -976,9 +984,15 @@ header {
     padding-top: 28px;
   }
   .big-menu {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    margin: 0;
     flex-direction: column;
-    margin: 120px 0 0 0;
     align-items: center;
+    z-index: 2;
+    width: 100%;
   }
   .big-menu li {
     margin-bottom: 20px;
