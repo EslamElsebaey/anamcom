@@ -301,6 +301,7 @@ a:focus, button:focus {
   }
 }
 .features {
+  direction: rtl;
   background-color: #ed1d24;
   padding-top: 115px;
   background-image: url(../images/pattern-bg.png);
@@ -1668,9 +1669,7 @@ html[dir=ltr] .features .general-title, html[dir=ltr] .list-item .item-title, ht
 }
 html[dir=ltr] .features-cont {
   width: 530px;
-}
-html[dir=ltr] .features .mobile-hand-img {
-  transform: scaleX(-1);
+  direction: ltr;
 }
 html[dir=ltr] .client-reviews .item .quote-text {
   line-height: 1.6;

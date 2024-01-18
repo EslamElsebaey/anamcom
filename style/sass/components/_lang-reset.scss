@@ -5,9 +5,7 @@ html[dir="ltr"]{
     }
     .features-cont{
         width: 530px;
-    }
-    .features .mobile-hand-img{
-        transform: scaleX(-1);
+        direction: ltr;
     }
     .client-reviews .item .quote-text{
         line-height: 1.6;
