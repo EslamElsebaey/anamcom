@@ -14,8 +14,18 @@ header{
 
 
 .blur-header{
-    backdrop-filter: saturate(180%) blur(3px);
-    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 20px 0px;
+    backdrop-filter: saturate(180%) blur(7px);
+    background-color: rgba($color: #fff, $alpha: .9);
+    .openBtn i{
+        color: #010101;
+    }
+    .nav-ul > li a{
+        color: #010101;
+    }
+    .header-links a{
+        background-color: #010101;
+    }
 }
 
 .fixed-header{
@@ -63,21 +73,6 @@ header{
     }
 }
 
-.overlay{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 5;
-    background-color: rgba($color: #000000, $alpha: .8);
-}
-.show-overlay{
-    visibility: visible;
-    opacity: 1;
-}
 
 
 
@@ -175,13 +170,10 @@ header{
         .closeBtn {
             display: flex;
             i {
-                color: #000;
+                color: #fff;
                 font-size: 24px;
             }
         } 
-    }
-    .nav-ul > li a{
-        color: #000;
     }
     .logo img{
         width: 105px;
@@ -199,19 +191,21 @@ header{
         overflow-y: auto;
         position: fixed ;
         top: 0 ;
-        inset-inline-start: -100%;
-        width: 82%;
+        left: 0;
+        display: none;
+        // inset-inline-start: -100%;
+        width: 100%;
         height: 100vh;
-        background-color: #fff;
-        z-index: 10;
+        background-color: #000;
+        z-index: -1;
         padding: 20px;
         padding-top: 28px;
-        transition:  all linear .3s;
+        // transition:  all linear .3s;
     }
     .nav-ul{
         flex-direction: column;
-        margin: 45px 0 0 0 ;
-        align-items: flex-start;
+        margin: 105px 0 0 0 ;
+        align-items: center;
     }
     .nav-ul > li{
         margin-bottom: 20px;
@@ -221,6 +215,9 @@ header{
 }
 
 @include max-768 {
+    .nav-ul{
+        margin-top: 80px;
+    }
     header{
         padding: 10px 0;
     }
@@ -246,6 +243,7 @@ header{
     .logo img{
         width: 65px;
     }
+   
     nav{
         padding-top: 22px;
     }

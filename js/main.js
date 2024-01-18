@@ -17,13 +17,14 @@ $(document).ready(function(){
   });
 
 
+  new WOW().init();
 
-
+  
 
 // App screens Swiper
 const appScreens = new Swiper('.app-screens .swiper', {
   loop: true,
-  autoplay: true,
+  // autoplay: true,
   allowTouchMove: true,
   centeredSlides: true,
   slideToClickedSlide: true,
@@ -39,7 +40,7 @@ const appScreens = new Swiper('.app-screens .swiper', {
   
   breakpoints: {
     0: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 10,
     },
     767: {
@@ -119,8 +120,9 @@ $(".main-question").on("click", function(){
 // fixed header
 
 $(window).on("scroll" , function (){
-  if($(window).scrollTop() > 250){
-    $("header").addClass("blur-header")
+  if($(window).scrollTop() > 150){
+    $("header").addClass("blur-header");
+    $(".logo img").attr("src" , "images/anamcom-logo-light.svg")
     if($(window).width() > 992){
       $("header").addClass("fixed-header")
     }
@@ -133,6 +135,8 @@ $(window).on("scroll" , function (){
     $("header").removeClass("fixed-header")
     $("header").removeClass("blur-header")
     $("header").removeClass("padding-8")
+    $(".logo img").attr("src" , "images/anamcom-logo-dark.svg")
+
 
 
   }
@@ -147,17 +151,17 @@ let closeBtn = $(".closeBtn") , openBtn = $(".openBtn") ;
 
 
 openBtn.on("click", function(){
-  $("nav").addClass("open-nav");  
-  $("body").addClass("overflow-hiddden") ;
-  $(".overlay").addClass("show-overlay")
+  // $("nav").addClass("open-nav");  
+  $("nav").slideToggle(400)
+  $("body").toggleClass("overflow-hiddden") ;
+  $(this).children("i").toggleClass("fa-xmark")
 })
 
 
-closeBtn.on("click" , function(){
-  $("nav").removeClass("open-nav");
-  $(".overlay").removeClass("show-overlay")
-  $("body").removeClass("overflow-hiddden") ;
-})
+// closeBtn.on("click" , function(){
+//   $("nav").slideUp(400)
+//   $("body").removeClass("overflow-hiddden") ;
+// })
 
 
 

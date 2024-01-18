@@ -1,5 +1,5 @@
 .about{
-    padding-top: 70px;
+    padding-top: 100px;
     padding-bottom: 160px;
     .sub-title{
         margin-bottom: 22px;
@@ -80,8 +80,9 @@
         padding-bottom: 60px;
     }
     .about .items{
-        grid-template-columns:  1fr;
-        row-gap: 45px;
+        // grid-template-columns:  1fr;
+        row-gap: 40px;
+        column-gap: 25px;
     }
     .about .para{
         font-size: 18px;
@@ -89,6 +90,7 @@
     }
     .about .item .title{
         margin-top: 20px;
+        line-height: 1.5;
     }
     .about .item .icon{
         font-size: 35px;

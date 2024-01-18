@@ -168,7 +168,7 @@ a:focus, button:focus {
   color: #fff;
 }
 .toTop .toTop-icon {
-  font-size: 20px;
+  font-size: 14px;
   color: #253138;
   transition: all linear 0.2s;
 }
@@ -176,6 +176,10 @@ a:focus, button:focus {
 .showToTop {
   opacity: 1;
   visibility: visible;
+}
+
+.overflow-hiddden {
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -206,7 +210,7 @@ a:focus, button:focus {
   }
 }
 .about {
-  padding-top: 70px;
+  padding-top: 100px;
   padding-bottom: 160px;
 }
 .about .sub-title {
@@ -286,8 +290,9 @@ a:focus, button:focus {
     padding-bottom: 60px;
   }
   .about .items {
-    grid-template-columns: 1fr;
-    row-gap: 45px;
+    row-gap: 40px;
+    -moz-column-gap: 25px;
+         column-gap: 25px;
   }
   .about .para {
     font-size: 18px;
@@ -295,6 +300,7 @@ a:focus, button:focus {
   }
   .about .item .title {
     margin-top: 20px;
+    line-height: 1.5;
   }
   .about .item .icon {
     font-size: 35px;
@@ -521,9 +527,9 @@ a:focus, button:focus {
 }
 @media only screen and (max-width: 767px) {
   .app-screens .mySwiper-parent .frame {
-    width: 36%;
+    width: 54%;
     height: 105%;
-    top: -8px;
+    top: -11px;
   }
   .app-screens .mySwiper-parent .frame img {
     height: 100%;
@@ -675,7 +681,7 @@ a:focus, button:focus {
     padding-inline-start: 34px;
   }
   .ques-answer {
-    padding-inline-end: 20px;
+    padding-inline-end: 40px;
   }
   .ques-num {
     width: 22px;
@@ -758,8 +764,7 @@ a:focus, button:focus {
 }
 
 .download-app .download-links a:hover {
-  box-shadow: 0 10px 12px -7px #000;
-  transform: translateY(-6px);
+  background-color: #0d0d0d;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -825,9 +830,19 @@ header {
 }
 
 .blur-header {
-  -webkit-backdrop-filter: saturate(180%) blur(3px);
-          backdrop-filter: saturate(180%) blur(3px);
-  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 20px 0px;
+  -webkit-backdrop-filter: saturate(180%) blur(7px);
+          backdrop-filter: saturate(180%) blur(7px);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.blur-header .openBtn i {
+  color: #010101;
+}
+.blur-header .nav-ul > li a {
+  color: #010101;
+}
+.blur-header .header-links a {
+  background-color: #010101;
 }
 
 .fixed-header {
@@ -869,23 +884,6 @@ header {
 }
 .header-links a .apple {
   font-size: 26px;
-}
-
-.overlay {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 5;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.show-overlay {
-  visibility: visible;
-  opacity: 1;
 }
 
 .header-content {
@@ -960,11 +958,8 @@ header {
     display: flex;
   }
   .closenav-holder .closeBtn i {
-    color: #000;
+    color: #fff;
     font-size: 24px;
-  }
-  .nav-ul > li a {
-    color: #000;
   }
   .logo img {
     width: 105px;
@@ -980,19 +975,19 @@ header {
     overflow-y: auto;
     position: fixed;
     top: 0;
-    inset-inline-start: -100%;
-    width: 82%;
+    left: 0;
+    display: none;
+    width: 100%;
     height: 100vh;
-    background-color: #fff;
-    z-index: 10;
+    background-color: #000;
+    z-index: -1;
     padding: 20px;
     padding-top: 28px;
-    transition: all linear 0.3s;
   }
   .nav-ul {
     flex-direction: column;
-    margin: 45px 0 0 0;
-    align-items: flex-start;
+    margin: 105px 0 0 0;
+    align-items: center;
   }
   .nav-ul > li {
     margin-bottom: 20px;
@@ -1001,6 +996,9 @@ header {
   }
 }
 @media only screen and (max-width: 767px) {
+  .nav-ul {
+    margin-top: 80px;
+  }
   header {
     padding: 10px 0;
   }
@@ -1150,8 +1148,8 @@ header {
     margin-bottom: 12px;
   }
   .mainBanner-parent {
-    -webkit-clip-path: ellipse(140% 100% at 50% 0%);
-            clip-path: ellipse(140% 100% at 50% 0%);
+    -webkit-clip-path: ellipse(160% 100% at 50% 0%);
+            clip-path: ellipse(160% 100% at 50% 0%);
   }
   .banner-desc .second-title {
     font-size: 22px;
@@ -1510,9 +1508,8 @@ html[dir=ltr] .client-reviews .swiper-buttons div i {
   transition: all ease-in-out 0.2s;
 }
 .myform .submit-holder button:hover {
-  background-color: #ffffff;
-  color: #ed1d24;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #000;
+  color: #fff;
 }
 
 .social-div {
@@ -1553,6 +1550,10 @@ html[dir=ltr] .client-reviews .swiper-buttons div i {
 .social-items .item .num {
   font-size: 14px;
   color: #808080;
+  transition: all ease-in-out 0.2s;
+}
+.social-items .item .num:hover {
+  color: #ed1d24;
 }
 
 .social-icons {
@@ -1570,6 +1571,13 @@ html[dir=ltr] .client-reviews .swiper-buttons div i {
   align-items: center;
   justify-content: center;
   background-color: #ed1d24;
+  transition: all ease-in-out 0.2s;
+}
+.social-icons a:hover {
+  background-color: #fff;
+}
+.social-icons a:hover i {
+  color: #ed1d24;
 }
 .social-icons a i {
   font-size: 18px;
