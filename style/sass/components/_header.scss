@@ -142,6 +142,9 @@ header{
 
 
 @include max-992 {
+    .big-menu li a{
+        font-size: 18px;
+    }
     .call-opennav-div{
         display: flex;
         align-items: center;
