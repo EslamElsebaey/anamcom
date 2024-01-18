@@ -168,9 +168,16 @@ openBtn.on("click", function(){
   
   }
 
-  $("nav").slideToggle(400)
+
+  $(".navigation").slideToggle(400)
   $("body").toggleClass("overflow-hidden") ;
-  $(this).children("i").toggleClass("fa-xmark")
+  $(this).children("i").toggleClass("fa-xmark");
+
+  if($(this).children("i").hasClass("fa-xmark")){
+    $(".big-menu li").addClass("opacity-100")
+  }else{
+    $(".big-menu li").removeClass("opacity-100")
+  }
  
    
    

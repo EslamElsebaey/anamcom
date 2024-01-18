@@ -20,7 +20,7 @@ header{
     .openBtn i{
         color: #010101;
     }
-    .nav-ul > li a{
+    .big-menu  li a{
         color: #010101;
     }
     .header-links a{
@@ -97,14 +97,16 @@ header{
 
 
 
-.nav-ul {
+.big-menu {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    margin: 0;
     li:last-child{
         margin-inline-end: 0;
     }
-   > li{
+    li{
         margin-inline-end: 25px;
         a{
             font-size: 14px;
@@ -127,8 +129,11 @@ header{
 
 @include min-992{
     
-    .nav-ul > li a.active{
+    .big-menu  li a.active{
         color: #ed1d24;
+    }
+    .openBtn{
+        display: none;
     }
 }
 
@@ -141,7 +146,7 @@ header{
         display: flex;
         align-items: center;
     }
-    .nav-ul > li{
+    .big-menu  li{
         margin-inline-end: 17px;
     }
     .header-content{
@@ -172,10 +177,10 @@ header{
     }
  
    
-    .nav-ul li:last-child{
+    .big-menu li:last-child{
         margin-bottom: 0;
     }
-    nav{
+    .navigation{
         overflow-y: auto;
         position: fixed ;
         top: 0 ;
@@ -190,17 +195,48 @@ header{
         padding-top: 28px;
         // transition:  all linear .3s;
     }
-    .nav-ul{
+    .big-menu{
         flex-direction: column;
         margin: 120px 0 0 0 ;
         align-items: center;
     }
-    .nav-ul > li{
+    .big-menu  li{
         margin-bottom: 20px;
         margin-inline-end: 0;
         text-align: start;
+        opacity: 0;
     }
+
 }
+
+
+.big-menu li:first-of-type {
+    transition: all 0.2s ease-in-out;
+  }
+  
+
+.big-menu li:nth-of-type(2) {
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .big-menu li:nth-of-type(3) {
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .big-menu li:nth-of-type(4) {
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .big-menu li:nth-of-type(5) {
+    transition: all 1s ease-in-out;
+  }
+  
+  .big-menu li:nth-of-type(6) {
+    transition: all 1.2s ease-in-out;
+  }
+  .big-menu li:nth-of-type(7) {
+    transition: all 1.4s ease-in-out;
+  }
 
 @include max-768 {
   
@@ -230,7 +266,7 @@ header{
         width: 65px;
     }
    
-    nav{
+    .navigation{
         padding-top: 22px;
     }
 }
@@ -242,7 +278,7 @@ header{
     .header-links a{
        background-color:  rgba(255, 255, 255, 0.102);
     }
-     .nav-ul > li a{
+     .big-menu  li a{
         color: #fff;
     }
 }
