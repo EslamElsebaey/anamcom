@@ -615,7 +615,7 @@ a:focus, button:focus {
 
 .ques-answer {
   width: 839px;
-  margin-inline-start: 50px;
+  padding-inline-start: 50px;
   font-size: 16px;
   line-height: 32px;
   color: #010101;
@@ -640,7 +640,7 @@ a:focus, button:focus {
     width: 100%;
   }
   .ques-answer {
-    padding-inline-end: 100px;
+    padding-inline-end: 50px;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -663,7 +663,7 @@ a:focus, button:focus {
   }
   .ques-text {
     font-size: 14px;
-    margin-inline-start: 15px;
+    margin-inline-start: 12px;
     padding-inline-end: 15px;
   }
   .faq {
@@ -672,7 +672,14 @@ a:focus, button:focus {
   .ques-answer {
     font-size: 14px;
     line-height: 1.9;
-    margin-inline-start: 40px;
+    padding-inline-start: 34px;
+  }
+  .ques-answer {
+    padding-inline-end: 20px;
+  }
+  .ques-num {
+    width: 22px;
+    font-size: 19px;
   }
 }
 .download-app {
