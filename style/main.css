@@ -1582,6 +1582,7 @@ html[dir=ltr] .client-reviews .swiper-buttons div i {
 }
 .social-items .item .text-icon {
   margin-bottom: 12px;
+  align-items: center;
 }
 .social-items .item .text {
   font-size: 14px;

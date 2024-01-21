@@ -56,7 +56,7 @@
             transition: all ease-in-out .2s;
             &:focus{
                 outline: none !important;
-                border-color: #ed1d24;
+                border-color: $main-color;
             }
             &::placeholder {
                 font-size: 14px;
@@ -78,7 +78,7 @@
                  .select2-selection__arrow::after{
                     transform: translateY(-50%) rotate(180deg);
                 }
-                border-color: #ed1d24 !important;
+                border-color: $main-color !important;
                 // border: 2px solid #b6b6b6 !important;
                 // outline: none !important;
             }
@@ -116,7 +116,7 @@
             width: 150px;
             height: 50px;
             border-radius: 25px;
-            background-color: #ed1d24;
+            background-color: $main-color;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -142,7 +142,7 @@
     // width: 360px;
     // height: 476px;
     border-radius: 15px;
-    background-color: #010101;
+    background-color: $second-color;
     .head{
         font-size: 18px;
         color: #ffffff;
@@ -159,6 +159,7 @@
         margin-bottom: 20px;
         .text-icon{
             margin-bottom: 12px;
+            align-items: center;
         }
         .text{
             font-size: 14px;
@@ -169,14 +170,14 @@
         }
         .icon{
             font-size: 16px;
-            color: #ed1d24;
+            color: $main-color;
         }
         .num{
             font-size: 14px;
             color: #808080;
             transition: all ease-in-out .2s;
             &:hover{
-                color: #ed1d24;
+                color: $main-color;
             }
         }
     }
@@ -193,12 +194,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #ed1d24;
+        background-color: $main-color;
         transition: all ease-in-out .2s;
         &:hover{
             background-color: #fff;
             i{
-                color: #ed1d24;
+                color: $main-color;
             }
         }
         i{

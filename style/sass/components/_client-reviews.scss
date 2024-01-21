@@ -47,7 +47,7 @@
             background-color: #ffffff;
             transition: all ease-in-out .2s;
             &:hover{
-                background-color: #ed1d24;
+                background-color: $main-color;
                 i{
                     color: #fff;
                 }
@@ -91,12 +91,12 @@
         background-color: #ffffff;
         .icon{
             font-size: 48px;
-            color: #ed1d24;
+            color: $main-color;
         }
         .quote-text{
             font-size: 16px;
             line-height: 30px;
-            color: #010101;
+            color: $second-color;
             text-align: start;
             margin-top: 15px;
             margin-bottom: 0;
@@ -147,7 +147,7 @@ html[dir="ltr"]{
                 background-color: #000;
             }
             .swiper-pagination-bullet-active{
-                background-color: #ed1d24;
+                background-color: $main-color;
                 opacity: 1;
             }
         }

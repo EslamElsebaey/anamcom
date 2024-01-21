@@ -18,13 +18,13 @@ header{
     backdrop-filter: saturate(180%) blur(7px);
     background-color: rgba($color: #fff, $alpha: .9);
     .openBtn i{
-        color: #010101;
+        color: $second-color;
     }
     .big-menu  li a{
-        color: #010101;
+        color: $second-color;
     }
     .header-links a{
-        background-color: #010101;
+        background-color: $second-color;
     }
 }
 
@@ -59,7 +59,7 @@ header{
         transition: background-color ease-in-out .2s;
        
         &:hover{
-            background-color: #ed1d24;
+            background-color: $main-color;
         }
         i{
             color: #fff;
@@ -119,7 +119,7 @@ header{
             text-transform: capitalize;
             transition: all linear .2s;
             &:hover{
-                color: #ed1d24;
+                color: $main-color;
             }
         }
       
@@ -134,7 +134,7 @@ header{
 @include min-992{
     
     .big-menu  li a.active{
-        color: #ed1d24;
+        color: $main-color;
     }
     .openBtn{
         display: none;

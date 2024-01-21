@@ -36,7 +36,7 @@
     }
     .icon{
         font-size: 48px;
-        color: #ed1d24;
+        color: $main-color;
         text-align: center;
     }
 }
@@ -80,7 +80,6 @@
         padding-bottom: 60px;
     }
     .about .items{
-        // grid-template-columns:  1fr;
         row-gap: 40px;
         column-gap: 25px;
     }
