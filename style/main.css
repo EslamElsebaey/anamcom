@@ -1860,6 +1860,9 @@ html[dir=ltr] .download-parent {
   max-width: 100%;
   width: 100%;
 }
+.pages-body .ques-answer {
+  width: 1017px;
+}
 
 .pages-body .big-menu li a {
   color: #010101;
@@ -1890,10 +1893,15 @@ html[dir=ltr] .download-parent {
   font-size: 18px;
   line-height: 36px;
   color: #000000;
-  text-align: start;
+  text-align: justify;
   margin-bottom: 0;
 }
 
+@media only screen and (max-width: 1199px) {
+  .pages-body .ques-answer {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 991px) {
   .pages-body .big-menu li a {
     color: #fff;

@@ -3,6 +3,9 @@
         max-width: 100%;
         width: 100%;
     }
+    .ques-answer{
+      width: 1017px;
+    }
 }
 
 
@@ -38,12 +41,17 @@
     font-size: 18px;
     line-height: 36px;
     color: #000000;
-    text-align: start;
+    text-align: justify;
     margin-bottom: 0;
   }
 }
 
 
+@include max-1200{
+  .pages-body .ques-answer{
+    width: 100%;
+  }
+}
 
   @include max-992{
         .pages-body .big-menu li a{
