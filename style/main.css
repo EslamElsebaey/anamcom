@@ -419,7 +419,8 @@ a:focus, button:focus {
     width: 100%;
   }
   .features .mobile-hand-img {
-    max-width: 350px;
+    width: 350px;
+    max-width: 100%;
     bottom: -30px;
   }
   .features {
@@ -1344,6 +1345,8 @@ html[dir=ltr] .client-reviews .swiper-buttons div i {
   .client-reviews .swiper-pagination .swiper-pagination-bullet {
     opacity: 0.302;
     background-color: #000;
+    width: 6px;
+    height: 6px;
   }
   .client-reviews .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #ed1d24;
