@@ -38,6 +38,54 @@ body {
   font-family: "BC Arabic";
 }
 
+.read-more {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #808080;
+  text-align: center;
+  display: block;
+  margin-top: 40px;
+  text-transform: capitalize;
+}
+.read-more:hover {
+  color: #ed1d24;
+  text-decoration: underline;
+}
+
+.breadcrumb-sec {
+  padding: 25px 0;
+  margin-top: 130px;
+}
+
+.item-home::after {
+  content: " / ";
+  padding: 0;
+  color: #808080;
+  padding-inline-start: 3px;
+  padding-inline-end: 8px;
+}
+
+.breadcrumb {
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.bread-link {
+  transition: all linear 0.2s;
+}
+.bread-link:hover {
+  color: #ed1d24;
+}
+
+ol.breadcrumb li a, ol.breadcrumb li span {
+  transition: all 0.2s linear;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #808080;
+  text-decoration: none;
+}
+
 .sub-title {
   font-size: 22px;
   color: #ed1d24;
@@ -190,6 +238,10 @@ a:focus, button:focus {
   }
 }
 @media only screen and (max-width: 767px) {
+  .breadcrumb-sec {
+    margin-top: 100px;
+    padding: 10px 0;
+  }
   .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
     padding-right: 20px;
     padding-left: 20px;
@@ -220,10 +272,11 @@ a:focus, button:focus {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 55px;
+  margin-bottom: 0;
 }
 
 .about .items {
+  margin-top: 55px;
   width: 1045px;
   margin-left: auto;
   margin-right: auto;
@@ -1725,7 +1778,32 @@ footer {
   margin-inline-start: 5px;
 }
 
+.footer-content .main-links {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  margin-bottom: 25px;
+}
+.footer-content .main-links a {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #808080;
+  text-align: center;
+  transition: all ease-in-out 0.2s;
+}
+.footer-content .main-links a:hover {
+  color: #ed1d24;
+}
+
 @media only screen and (max-width: 767px) {
+  .footer-content .main-links {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: center;
+  }
   footer {
     padding-bottom: 40px;
   }
@@ -1772,5 +1850,69 @@ html[dir=ltr] .download-parent {
 @media only screen and (max-width: 1199px) {
   html[dir=ltr] .download-parent {
     width: 100%;
+  }
+}
+
+.pages-body .questions-parent {
+  max-width: 100%;
+  width: 100%;
+}
+
+.pages-body .big-menu li a {
+  color: #010101;
+}
+.pages-body .big-menu li a:hover {
+  color: #ed1d24;
+}
+.pages-body .header-links a {
+  background-color: #010101;
+}
+.pages-body .openBtn i {
+  color: #010101;
+}
+
+.page-general-sec {
+  padding-top: 25px;
+  padding-bottom: 80px;
+}
+.page-general-sec .page-sec-head {
+  font-size: 24px;
+  text-transform: capitalize;
+  color: #000000;
+  font-weight: 700;
+  text-align: start;
+  margin-bottom: 40px;
+}
+.page-general-sec .page-sec-para {
+  font-size: 18px;
+  line-height: 36px;
+  color: #000000;
+  text-align: start;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .pages-body .big-menu li a {
+    color: #fff;
+  }
+  .pages-fixed-header .openBtn i {
+    color: #fff;
+  }
+  .pages-fixed-header .header-links a {
+    background-color: rgba(255, 255, 255, 0.102);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .page-general-sec .page-sec-head {
+    font-size: 21px;
+    margin-bottom: 25px;
+  }
+  .page-general-sec {
+    padding-bottom: 30px;
+    padding-top: 20px;
+  }
+  .page-general-sec .page-sec-para {
+    line-height: 1.7;
+    font-size: 17px;
   }
 }/*# sourceMappingURL=main.css.map */

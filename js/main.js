@@ -27,7 +27,7 @@ $(document).ready(function(){
 // App screens Swiper
 const appScreens = new Swiper('.app-screens .swiper', {
   loop: true,
-  // autoplay: true,
+  autoplay: true,
   allowTouchMove: true,
   centeredSlides: true,
   slideToClickedSlide: true,
@@ -123,9 +123,10 @@ $(".main-question").on("click", function(){
 // fixed header
 
 $(window).on("scroll" , function (){
-  if($(window).scrollTop() > 150){
+  if($(window).scrollTop() > 100){
     $("header").addClass("blur-header");
     $(".logo img").attr("src" , "images/anamcom-logo-light.svg")
+    
     if($(window).width() > 992){
       $("header").addClass("fixed-header")
     }
@@ -138,7 +139,10 @@ $(window).on("scroll" , function (){
     $("header").removeClass("fixed-header")
     $("header").removeClass("blur-header")
     $("header").removeClass("padding-8")
-    $(".logo img").attr("src" , "images/anamcom-logo-dark.svg")
+    if(!$("body").hasClass("pages-body")){
+      $(".logo img").attr("src" , "images/anamcom-logo-dark.svg");
+    }
+   
 
 
 
@@ -150,20 +154,34 @@ $(window).on("scroll" , function (){
 
 // open and close nav
 
-let closeBtn = $(".closeBtn") , openBtn = $(".openBtn") ;
+let  openBtn = $(".openBtn") ;
 
 
 openBtn.on("click", function(){
-  
+ 
   if($(window).width() < 992){
+    if($("body").hasClass("pages-body")){
+      let currentSrc = $(".logo img").attr("src");
+      if (currentSrc == "images/anamcom-logo-light.svg") {
+        $(".logo img").attr("src", "images/anamcom-logo-dark.svg");
+      } else {
+        $(".logo img").attr("src", "images/anamcom-logo-light.svg");
+      }
+      $(".pages-body header").toggleClass("pages-fixed-header");
+    }
+
+
     if($(window).scrollTop() > 100){
       $("header").toggleClass("header-mob");
-      let currentSrc = $(".logo img").attr("src");
-      if (currentSrc == "images/anamcom-logo-dark.svg") {
-        $(".logo img").attr("src", "images/anamcom-logo-light.svg");
-      } else {
-        $(".logo img").attr("src", "images/anamcom-logo-dark.svg");
+      if(!$("body").hasClass("pages-body")){
+        let currentSrc = $(".logo img").attr("src");
+        if (currentSrc == "images/anamcom-logo-dark.svg") {
+          $(".logo img").attr("src", "images/anamcom-logo-light.svg");
+        } else {
+          $(".logo img").attr("src", "images/anamcom-logo-dark.svg");
+        }
       }
+     
     }
   
   }
