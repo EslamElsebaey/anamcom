@@ -11,16 +11,19 @@
 
 .pages-body{
     .big-menu li a{
-      color: #010101;
+      color: $second-color;
       &:hover{
-        color: #ed1d24;
+        color: $main-color;
       }
     }
     .header-links a{
-      background-color: #010101;
+      background-color: $second-color;
+      &:hover{
+        background-color: $main-color;
+      }
     }
     .openBtn i{
-      color: #010101;
+      color: $second-color;
     }
   }
 
@@ -32,7 +35,7 @@
   .page-sec-head{
     font-size: 24px;
     text-transform: capitalize;
-  color: #000000;
+  color: $black-color;
   font-weight: 700;
   text-align: start;
   margin-bottom: 40px;
@@ -40,7 +43,7 @@
   .page-sec-para{
     font-size: 18px;
     line-height: 36px;
-    color: #000000;
+    color: $black-color;
     text-align: justify;
     margin-bottom: 0;
   }
