@@ -19,7 +19,28 @@ $(document).ready(function(){
 
 
   
-      
+        // main Swiper 
+const mainSwiper = new Swiper('.mainBanner .swiper', {
+  loop: true,
+  //  autoplay: true,
+  draggable: true,
+  navigation: {
+    nextEl: ' .mainBanner .swiper-button-next',
+    prevEl: '.mainBanner .swiper-button-prev',
+  },
+
+  pagination: {
+    el: '.mainBanner .swiper-pagination',
+    clickable: true,
+  },
+  
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+  }
+});
    
 
   

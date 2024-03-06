@@ -1145,17 +1145,9 @@ header {
   color: #fff;
 }
 
-.mainBanner {
-  height: 100vh;
-}
-
 .mainBanner-parent {
-  background-image: url(../images/main-pattern.png), url(../images/hero-bg.jpg);
   background-color: rgba(0, 0, 0, 0.7);
-  background-position: center center, center 100%;
-  background-size: cover;
-  z-index: 3;
-  height: 100%;
+  height: 100vh;
   position: relative;
   -webkit-clip-path: ellipse(100% 100% at 50% 0%);
           clip-path: ellipse(100% 100% at 50% 0%);
@@ -1197,6 +1189,59 @@ header {
   background-color: #ed1d24;
 }
 
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: "";
+}
+
+.mainBanner .swiper-button-next, .mainBanner .swiper-button-prev {
+  transition: all linear 0.2s;
+  background-color: rgba(255, 255, 255, 0.102);
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.mainBanner .swiper-button-next i, .mainBanner .swiper-button-prev i {
+  font-size: 18px;
+  color: #ffffff;
+  transition: all linear 0.3s;
+}
+.mainBanner .swiper-button-next:hover, .mainBanner .swiper-button-prev:hover {
+  background-color: #ed1d24;
+  opacity: 1;
+}
+.mainBanner .swiper-button-prev, .mainBanner .swiper-rtl .swiper-button-next {
+  left: 35px;
+}
+.mainBanner .swiper-button-next, .mainBanner .swiper-rtl .swiper-button-prev {
+  right: 35px;
+}
+.mainBanner .swiper-pagination {
+  display: none;
+}
+
+.mainBanner .mainBanner-parent {
+  position: relative;
+}
+.mainBanner figure {
+  margin: 0;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+}
+.mainBanner figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mainBanner .mainslider-item {
+  position: relative;
+}
+
 .scroll-btn {
   position: absolute;
   display: flex;
@@ -1205,6 +1250,7 @@ header {
   justify-content: center;
   bottom: 45px;
   text-align: center;
+  z-index: 5;
 }
 .scroll-btn span {
   width: 24px;
@@ -1215,6 +1261,7 @@ header {
   position: relative;
   display: inline-block;
   transition: all ease 0.3s;
+  z-index: 3;
 }
 
 .scroll-btn span::after {
@@ -1246,9 +1293,29 @@ header {
     width: 80%;
   }
 }
+@media only screen and (max-width: 991px) {
+  .mainBanner .swiper-button-next, .mainBanner .swiper-button-prev {
+    display: none;
+  }
+  .mainBanner .swiper-pagination {
+    display: block;
+    z-index: 1;
+  }
+  .mainBanner .swiper-pagination .swiper-pagination-bullet {
+    background-color: #fff;
+    opacity: 0.3;
+  }
+  .mainBanner .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #fff;
+    opacity: 1;
+  }
+}
 @media only screen and (max-width: 767px) {
+  .swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    display: none;
+  }
   .scroll-btn {
-    bottom: 35px;
+    bottom: 55px;
   }
   .banner-desc {
     flex-direction: column;
