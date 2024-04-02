@@ -1,28 +1,14 @@
 
 $(window).on("load" , function(){
   $(".preloader").fadeOut();
-  
-})
 
 
-
-
-$(document).ready(function(){
-  new WOW().init();
-  // fire select2
-  $('.myselect').select2();
-
-
-  $('.myform select').select2({
-    minimumResultsForSearch: -1
-  });
-
-
-  
+    
         // main Swiper 
 const mainSwiper = new Swiper('.mainBanner .swiper', {
   loop: true,
    autoplay: true,
+   speed : 1000 ,
   draggable: true,
   navigation: {
     nextEl: ' .mainBanner .swiper-button-next',
@@ -48,6 +34,7 @@ const mainSwiper = new Swiper('.mainBanner .swiper', {
 // App screens Swiper
 const appScreens = new Swiper('.app-screens .swiper', {
   loop: true,
+  speed : 1000 ,
   autoplay: true,
   allowTouchMove: true,
   centeredSlides: true,
@@ -88,6 +75,7 @@ const appScreens = new Swiper('.app-screens .swiper', {
 
 const clientsReview = new Swiper('.client-reviews .swiper', {
   loop: true,
+  speed : 1000 ,
   autoplay: true,
   allowTouchMove: true,
   draggable: true,
@@ -122,7 +110,23 @@ const clientsReview = new Swiper('.client-reviews .swiper', {
 
 
 
+// Fire wow
+new WOW().init();
+  
+})  // End window Load
 
+
+
+
+$(document).ready(function(){
+ 
+  // fire select2
+  $('.myselect').select2();
+
+
+  $('.myform select').select2({
+    minimumResultsForSearch: -1
+  });
 
 // **************************************************************************************************
 
@@ -273,7 +277,7 @@ $(".toTop").click(function(){
 
 
 
-}) // End of document ready
+}) // End  document ready
 
 
 
