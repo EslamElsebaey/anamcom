@@ -15,13 +15,16 @@ body {
   font-style: normal;
   font-family: 'Tajawal' ;
 }
+.readmore-holder{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
 .read-more{
   font-size: 14px;
   text-decoration: underline;
   color: #808080;
   text-align: center;
-  display: block;
-  margin-top: 40px;
   text-transform: capitalize;
   &:hover{
     color: #ed1d24;
@@ -244,7 +247,7 @@ a , button {
     margin-top: 100px;
     padding: 10px 0;
   }
-  .read-more{
+  .readmore-holder{
     margin-top: 25px;
   }
 
